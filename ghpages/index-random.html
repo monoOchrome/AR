@@ -30,9 +30,17 @@
     </head>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
+            <!-- asset management -->
 			<a-assets>
                 <a-asset-item id="robot" src="robot/scene.gltf"></a-asset-item>
                 <a-asset-item id="palm" src="palm/scene.gltf"></a-asset-item>
+                <img src="robot/textures/Material.008_baseColor.png">
+                <img src="robot/textures/Material.008_emissive.jpeg">
+                <img src="robot/textures/Material.008_metallicRoughness.png">
+                <img src="robot/textures/Material.008_normal.png">
+                <img src="palm/textures/Low_poly_hand_baseColor.png">
+                <img src="palm/textures/Low_poly_hand_metallicRoughness.png">
+                <img src="palm/textures/Low_poly_hand_normal.png">
 			</a-assets>
             <a-marker preset="hiro"></a-marker>
             <a-entity camera></a-entity>

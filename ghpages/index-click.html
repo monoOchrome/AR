@@ -29,8 +29,39 @@
     </head>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
+            <!-- asset management -->
 			<a-assets>
                 <a-asset-item id="izzy" src="izzy/scene.gltf"></a-asset-item>
+                <img src="izzy/textures/Boots_baseColor.jpeg">
+                <img src="izzy/textures/Boots_normal.png">
+                <img src="izzy/textures/Cornea_baseColor.jpeg">
+                <img src="izzy/textures/Cornea_metallicRoughness.png">
+                <img src="izzy/textures/Cornea_normal.png">
+                <img src="izzy/textures/Eyelash_baseColor.png">
+                <img src="izzy/textures/Fingernail_baseColor.jpeg">
+                <img src="izzy/textures/Fingernail_normal.png">
+                <img src="izzy/textures/Lower_Teeth_baseColor.jpeg">
+                <img src="izzy/textures/Lower_Teeth_normal.png">
+                <img src="izzy/textures/Skin_Body_baseColor.jpeg">
+                <img src="izzy/textures/Skin_Body_metallicRoughness.png">
+                <img src="izzy/textures/Skin_Body_normal.png">
+                <img src="izzy/textures/Skin_Head_baseColor.jpeg">
+                <img src="izzy/textures/Skin_Head_metallicRoughness.png">
+                <img src="izzy/textures/Skin_Head_normal.png">
+                <img src="izzy/textures/Tongue_baseColor.jpeg">
+                <img src="izzy/textures/Tongue_normal.png">
+                <img src="izzy/textures/Upper_Teeth_baseColor.jpeg">
+                <img src="izzy/textures/Upper_Teeth_normal.png">
+                <img src="izzy/textures/low_pony_tail_baseColor.png">
+                <img src="izzy/textures/material_11_baseColor.png">
+                <img src="izzy/textures/material_11_emissive.jpeg">
+                <img src="izzy/textures/material_11_normal.png">
+                <img src="izzy/textures/material_baseColor.png">
+                <img src="izzy/textures/material_emissive.jpeg">
+                <img src="izzy/textures/material_metallicRoughness.png">
+                <img src="izzy/textures/material_normal.png">
+                <img src="izzy/textures/short_jeans_baseColor.png">
+                <img src="izzy/textures/short_jeans_normal.png">
 			</a-assets>
             <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro" id="animated-marker">
                 <a-entity animation-mixer="clip:idle0518;loop:repeat;" gltf-model="#izzy" id="animated-model" scale="0.01 0.01 0.01" position="0 0 1" rotation="-90 0 0"></a-entity>
