@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+        <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script>
+            ARjs.Context.baseURL = 'http://localhost:8080/ar/';
+            THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/ar/ar/';
+            var animations = ['idle0518', 'walk0518'];
+            var currentIndex = 0;
+            AFRAME.registerComponent('markerhandler', {
+                init: function() {
+                    const animatedMarker = document.querySelector("#animated-marker");
+                    const aEntity = document.querySelector("#animated-model");
+
+                    animatedMarker.addEventListener('click', function(ev, target){
+                        const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+                        if (aEntity && intersectedElement === aEntity) {
+                            currentIndex++;
+                            if(currentIndex > 1) currentIndex = 0;
+                            aEntity.setAttribute('animation-mixer', 'clip:' + animations[currentIndex] + ';loop:repeat;');
+                        }
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs>
+			<a-assets>
+                <a-asset-item id="izzy" src="izzy/scene.gltf"></a-asset-item>
+			</a-assets>
+            <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro" id="animated-marker">
+                <a-entity animation-mixer="clip:idle0518;loop:repeat;" gltf-model="#izzy" id="animated-model" scale="0.01 0.01 0.01" position="0 0 1" rotation="-90 0 0"></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
