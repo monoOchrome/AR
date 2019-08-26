@@ -5,22 +5,24 @@
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
         <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script>
+            /* remote base urls */
             ARjs.Context.baseURL = 'https://monoochrome.github.io/AR/ghpages/';
             THREEx.ArToolkitContext.baseURL = 'https://monoochrome.github.io/AR/ghpages/ar/';
+
+            /* local base urls */
+            // ARjs.Context.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
+            // THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
         </script>
     </head>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
             <!-- asset management -->
 			<a-assets>
-                <a-asset-item animation-mixer="clip: *" id="robot" src="robot/scene.gltf"></a-asset-item>
-                <img src="robot/textures/Material.008_baseColor.png">
-                <img src="robot/textures/Material.008_emissive.jpeg">
-                <img src="robot/textures/Material.008_metallicRoughness.png">
-                <img src="robot/textures/Material.008_normal.png">
+                <a-asset-item animation-mixer="loop: repeat;" id="dragon" src="dragon/scene.gltf"></a-asset-item>
+                <img src="dragon/textures/micro_dragon_finomicro_dragon_mat_baseColor.png">
 			</a-assets>
             <a-marker preset="hiro">
-                <a-entity animation-mixer="loop:repeat;" gltf-model="#robot" scale="0.003 0.003 0.003" rotation="-90 0 0"></a-entity>
+                <a-entity animation-mixer="loop:repeat;" gltf-model="#dragon" scale="0.006 0.006 0.006" position="0 0 0.5" rotation="-90 0 0"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>

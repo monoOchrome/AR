@@ -6,10 +6,13 @@
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
         <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script>
-            // ARjs.Context.baseURL = 'https://monoochrome.github.io/AR/ghpages/';
-            // THREEx.ArToolkitContext.baseURL = 'https://monoochrome.github.io/AR/ghpages/ar/';
-            ARjs.Context.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
-            THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
+            /* remote base urls */
+            ARjs.Context.baseURL = 'https://monoochrome.github.io/AR/ghpages/';
+            THREEx.ArToolkitContext.baseURL = 'https://monoochrome.github.io/AR/ghpages/ar/';
+
+            /* local base urls */
+            // ARjs.Context.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
+            // THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
             var animations = ['Skeleton_Bones|Esqueleto_Atacar_1', 'Skeleton_Bones|Esqueleto_Atacar_2', 'Skeleton_Bones|Esqueleto_Defender', 'Skeleton_Bones|Esqueleto_Morrer', 'Skeleton_Bones|Esqueleto_Parado'];
             var currentIndex = 0;
             AFRAME.registerComponent('markerhandler', {
