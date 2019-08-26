@@ -18,11 +18,11 @@
         <a-scene embedded arjs>
             <!-- asset management -->
 			<a-assets>
-                <a-asset-item animation-mixer="loop: repeat;" id="dragon" src="dragon/scene.gltf"></a-asset-item>
-                <img src="dragon/textures/micro_dragon_finomicro_dragon_mat_baseColor.png">
+                <a-asset-item id="shiba" src="shiba/scene.gltf"></a-asset-item>
+                <img src="shiba/textures/Howie_baseColor.png">
 			</a-assets>
             <a-marker preset="hiro">
-                <a-entity animation-mixer="loop:repeat;" gltf-model="#dragon" scale="0.006 0.006 0.006" position="0 0 0.5" rotation="-90 0 0"></a-entity>
+                <a-entity animation-mixer="loop:repeat;" gltf-model="#shiba" scale="0.15 0.15 0.15" position="0 0 0.5" rotation="-90 0 0"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>

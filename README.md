@@ -22,7 +22,7 @@ https://monoochrome.github.io/AR/ghpages/marker.pdf
 ##### Model Geometrisi
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
-|832|26||884|460|
+|44|471||986|495|
 
 ##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-animated.html
@@ -33,11 +33,11 @@ Her refreshde önceden tanımlanmış 2 modelden biri gelecek. Kullanıcıya öz
 ##### Model Geometrisi 1
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
-|832|26||884|460|
+|44|471||986|495|
 ##### Model Geometrisi 2
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
-|92|887|30|2.2k|1.1k|
+|60|424|8|932|468|
 
 ##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-random.html
@@ -48,7 +48,7 @@ Marker üzerinde çıkan modele click/touch yaparak modelin içinde tanımlı ol
 ##### Model Geometrisi
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
-|44|999|42|2.2k|1.4k|
+|60|424|8|932|468|
 
 ##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-click.html

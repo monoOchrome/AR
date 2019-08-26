@@ -13,7 +13,7 @@
             /* local base urls */
             // ARjs.Context.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
             // THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
-            var animations = ['Skeleton_Bones|Esqueleto_Atacar_1', 'Skeleton_Bones|Esqueleto_Atacar_2', 'Skeleton_Bones|Esqueleto_Defender', 'Skeleton_Bones|Esqueleto_Morrer', 'Skeleton_Bones|Esqueleto_Parado'];
+            var animations = ['Walk', 'Cast'];
             var currentIndex = 0;
             AFRAME.registerComponent('markerhandler', {
                 init: function() {
@@ -24,7 +24,7 @@
                         const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
                         if (aEntity && intersectedElement === aEntity) {
                             currentIndex++;
-                            if(currentIndex > 4) currentIndex = 0;
+                            if(currentIndex > 1) currentIndex = 0;
                             aEntity.setAttribute('animation-mixer', 'clip:' + animations[currentIndex] + ';loop:repeat;');
                         }
                     });
@@ -36,10 +36,10 @@
         <a-scene embedded arjs>
             <!-- asset management -->
 			<a-assets>
-                <a-asset-item id="skeleton" src="skeleton/scene.gltf"></a-asset-item>
+                <a-asset-item id="wizard" src="wizard/scene.gltf"></a-asset-item>
 			</a-assets>
             <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro" id="animated-marker">
-                <a-entity animation-mixer="clip:Skeleton_Bones|Esqueleto_Atacar_1;loop:repeat;" gltf-model="#skeleton" id="animated-model" scale="0.008 0.008 0.008" position="0 0 0.7" rotation="-90 0 0"></a-entity>
+                <a-entity animation-mixer="clip:Walk;loop:repeat;" gltf-model="#wizard" id="animated-model" scale="0.12 0.12 0.12" position="0 0 0.5" rotation="-90 0 0"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
