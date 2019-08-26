@@ -21,9 +21,8 @@
                     const animatedMarker = document.querySelector("#animated-marker");
                     const aEntity = document.querySelector("#animated-model");
 
-                    animatedMarker.addEventListener('touchend', function(ev, target){
+                    animatedMarker.addEventListener('click', function(ev, target){
                         const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-                        console.log(ev && ev.detail && ev.detail.intersectedEl)
                         if (aEntity && intersectedElement === aEntity) {
                             currentIndex++;
                             if(currentIndex > 1) currentIndex = 0;
@@ -35,13 +34,13 @@
         </script>
     </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
+        <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;precision: medium;">
             <!-- asset management -->
 			<a-assets>
                 <a-asset-item id="wizard" src="wizard/scene.gltf"></a-asset-item>
 			</a-assets>
-            <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro" id="animated-marker">
-                <a-entity animation-mixer="clip:Walk;loop:repeat;" gltf-model="#wizard" id="animated-model" scale="0.2 0.2 0.2" position="0 0 0.5" rotation="-90 0 0"></a-entity>
+            <a-marker markerhandler cursor="rayOrigin: mouse" preset="hiro" id="animated-marker">
+                <a-entity animation-mixer="clip:Walk;loop:repeat;" gltf-model="#wizard" id="animated-model" scale="0.15 0.15 0.15" position="0 0 0.5" rotation="-90 0 0"></a-entity>
             </a-marker>
             <a-entity camera="far:100000; near:0.01"></a-entity>
         </a-scene>
