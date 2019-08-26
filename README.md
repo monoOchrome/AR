@@ -11,7 +11,7 @@
 - Marker siyah beyaz olmak zorunda
 - Marker şekli komplex olmamalı
 - Marker tanımlaması kodsal olarak 0 ve 255 değerleri üzerinden yapılıyor. Parlaklık değişimi bu değerleri değiştirdiği için marker tanımlanamaz ve 3d obje gözükmez. Örneğin önceden tanımlanmış 255 beyaz değeri parlaklık ile 230 a inerse markerı tanımıyor.
-###### Link (Desktop linki)
+##### Link (Desktop linki)
 https://monoochrome.github.io/AR/ghpages/marker.pdf
 
 ## Tests
@@ -19,32 +19,36 @@ https://monoochrome.github.io/AR/ghpages/marker.pdf
 - Her modelin geometri değerleri verildi. Bu değerler ne kadar artarsa performans o kadar düşüyor, telefonda ısınma ve kamerada yavaşlama oluyor. (Test edildi) Burada tercih edilmesi gereken low poly modeller. 
 
 ### Hareketli 3D Model
-###### Model Geometrisi
+##### Model Geometrisi
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
 |832|26||884|460|
 
-###### Link (Telefon test linki)
+##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-animated.html
 
 ### Hareketli 3D Model - Dinamik Değiştirme
-###### Model Geometrisi 1
+Her refreshde önceden tanımlanmış 2 modelden biri gelecek. Kullanıcıya özel model gösterebiliyoruz.
+
+##### Model Geometrisi 1
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
 |832|26||884|460|
-###### Model Geometrisi 2
+##### Model Geometrisi 2
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
 |92|887|30|2.2k|1.1k|
 
-###### Link (Telefon test linki)
+##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-random.html
 
 ### Hareketli 3D Model - Click/Touch Event
-###### Model Geometrisi
+Marker üzerinde çıkan modele click/touch yaparak modelin içinde tanımlı olan animasyonları değiştiriyoruz. 
+
+##### Model Geometrisi
 |Triangles|Quads|Polygons|Total Triangles|Vertices|
 |---|---|---|---|---|
 |44|999|42|2.2k|1.4k|
 
-###### Link (Telefon test linki)
+##### Link (Telefon test linki)
 https://monoochrome.github.io/AR/ghpages/index-click.html
