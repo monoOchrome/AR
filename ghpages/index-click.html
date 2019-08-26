@@ -15,13 +15,15 @@
             // THREEx.ArToolkitContext.baseURL = 'http://localhost:8080/AR/ghpages/ar/';
             var animations = ['Walk', 'Cast'];
             var currentIndex = 0;
+
             AFRAME.registerComponent('markerhandler', {
                 init: function() {
                     const animatedMarker = document.querySelector("#animated-marker");
                     const aEntity = document.querySelector("#animated-model");
 
-                    animatedMarker.addEventListener('click', function(ev, target){
+                    animatedMarker.addEventListener('touchend', function(ev, target){
                         const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+                        console.log(ev && ev.detail && ev.detail.intersectedEl)
                         if (aEntity && intersectedElement === aEntity) {
                             currentIndex++;
                             if(currentIndex > 1) currentIndex = 0;
