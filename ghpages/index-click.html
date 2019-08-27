@@ -2,7 +2,6 @@
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
         <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -27,26 +26,16 @@
         </script>
     </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <div class="log" style="position: fixed;background:#fff;color:#000;z-index:100;top: 0;left: 0;">test11</div>
+        <div class="log" style="position: fixed;background:#fff;color:#000;z-index:100;top: 0;left: 0;">test12</div>
         <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;precision: medium;">
             <!-- asset management -->
 			<a-assets>
                 <a-asset-item id="wizard" src="wizard/scene.gltf"></a-asset-item>
 			</a-assets>
-            <a-marker preset="hiro" id="animated-marker">
+            <a-marker preset="hiro" id="animated-marker" smooth="true" smoothThreshold="4">
                 <a-entity cursor="rayOrigin: mouse" animation-mixer="clip:Walk;loop:repeat;" gltf-model="#wizard" id="animated-model" scale="0.15 0.15 0.15" position="0 0 0.5" rotation="-90 0 0"></a-entity>
             </a-marker>
             <a-entity camera="far:100000; near:0.01"></a-entity>
         </a-scene>
-        <script>
-            $(document).ready(function(){
-                var refresh = Cookies.get('refresh6');
-                if(refresh === undefined){
-                    $('.log').text('test11' + refresh)
-                    Cookies.set('refresh6', true);
-                    window.location.reload();
-                }
-            });
-        </script>
     </body>
 </html>
