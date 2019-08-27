@@ -5,7 +5,8 @@
 **Android Chrome 76** - Çalışıyor  
 **Android firefox 68** - Çalışıyor  
 **IOS Safari 12.4** - Çalışıyor  
-**IOS Safari 10 XCODE/Simulator** - Kamera isteği göndermiyor, siyah ekran veriyor, çalışmıyor  
+**IOS Safari 10 XCODE/Simulator** - Kamera isteği göndermiyor, siyah ekran veriyor, çalışmıyor
+- Bu Ar.js plugini production için şu an uygun değil. Repoyu asıl hazırlayan kişi ortada yok ve güncellemeler bu yüzden minimuma inmiş. Stabil çalışmıyor, basic geometrik şekillerde performans alınabiliyor bu da kimin işine yarar bilemiyorum. Kullanan çoğu developer da sadece demo için kullandıklarını, birçok özelliğin eksik olduğunu belirtmişler. Sonuç olarak bu plugin hala development aşamasında.
 
 ## Marker
 - Marker siyah beyaz olmak zorunda
@@ -15,6 +16,7 @@
 https://monoochrome.github.io/AR/ghpages/marker.pdf
 
 ## Tests
+- Testler için kullandığım frameworkler: AR.js - A-Frame.js - Three.js
 - Testlerde kullanılan modeller **gltf** formatında. Hem performans hem de animasyon olabilmesi için tercih edilen format bu. 
 - Her modelin geometri değerleri verildi. Bu değerler ne kadar artarsa performans o kadar düşüyor, telefonda ısınma ve kamerada yavaşlama oluyor. (Test edildi) Burada tercih edilmesi gereken low poly modeller. 
 
