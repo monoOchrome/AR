@@ -5,9 +5,10 @@
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <script>
             $(document).ready(function(){
-                var refresh = Cookies.get('refresh1');
+                var refresh = Cookies.get('refresh5');
                 if(refresh === undefined){
-                    Cookies.set('refresh1', true);
+                    $('.log').text('test10' + refresh)
+                    Cookies.set('refresh5', true);
                     window.location.reload();
                 }
             });
@@ -36,6 +37,7 @@
         </script>
     </head>
     <body style='margin : 0px; overflow: hidden;'>
+        <div class="log" style="position: fixed;background:#fff;color:#000;z-index:100;top: 0;left: 0;">test10</div>
         <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;precision: medium;">
             <!-- asset management -->
 			<a-assets>
